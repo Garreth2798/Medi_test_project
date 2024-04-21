@@ -2,19 +2,24 @@ package com.cloudtest;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LocalTestExecution {
+
 	public static RemoteWebDriver driver;
 	
-	@Test
-	
-	public void LaunchBrowser() throws MalformedURLException
-	{
+@Test
+public void OpenChromeBrowser() throws MalformedURLException
+{
 		WebDriverManager.chromedriver().setup();
+		
 		//Step 1 set up the URL for the Selenium Grid
 		
 		String url = "http://192.168.1.10:4444/wd/hub";
@@ -44,11 +49,11 @@ public class LocalTestExecution {
 		
 		System.out.println(URL);
 		System.out.println(title);
-		System.out.println("Test");
 		
 		driver.quit();
 		
 		
 	}
 	
+
 }
