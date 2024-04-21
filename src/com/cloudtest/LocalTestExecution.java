@@ -45,6 +45,7 @@ public class LocalTestExecution {
 		
 		System.out.println(URL);
 		System.out.println(title);
+		System.out.println("Test");
 		
 		driver.quit();
 		
