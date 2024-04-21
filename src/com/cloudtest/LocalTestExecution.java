@@ -15,7 +15,6 @@ public class LocalTestExecution {
 	public void LaunchBrowser() throws MalformedURLException
 	{
 		WebDriverManager.chromedriver().setup();
-		WebDriverManager.chromedriver().clearDriverCache();
 		//Step 1 set up the URL for the Selenium Grid
 		
 		String url = "http://192.168.1.10:4444/wd/hub";
