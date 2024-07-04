@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-21T21:16:46 IST" name="Default suite" finished-at="2024-04-21T21:17:03 IST" duration-ms="17286">
+  <suite started-at="2024-04-21T22:57:49 IST" name="Default suite" finished-at="2024-04-21T22:57:55 IST" duration-ms="5472">
     <groups>
     </groups>
-    <test started-at="2024-04-21T21:16:46 IST" name="Default test" finished-at="2024-04-21T21:17:03 IST" duration-ms="17286">
-      <class name="com.cloudtest.LocalTestExecution">
-        <test-method signature="OpenChromeBrowser()[pri:0, instance:com.cloudtest.LocalTestExecution@1da2cb77]" started-at="2024-04-21T21:16:46 IST" name="OpenChromeBrowser" finished-at="2024-04-21T21:17:03 IST" duration-ms="17257" status="PASS">
+    <test started-at="2024-04-21T22:57:49 IST" name="Default test" finished-at="2024-04-21T22:57:55 IST" duration-ms="5472">
+      <class name="com.cloudtest.AmazonSearchTestCase">
+        <test-method signature="AmazonDynamicSearchTest()[pri:0, instance:com.cloudtest.AmazonSearchTestCase@1da2cb77]" started-at="2024-04-21T22:57:49 IST" name="AmazonDynamicSearchTest" finished-at="2024-04-21T22:57:55 IST" duration-ms="5444" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OpenChromeBrowser -->
-      </class> <!-- com.cloudtest.LocalTestExecution -->
+        </test-method> <!-- AmazonDynamicSearchTest -->
+      </class> <!-- com.cloudtest.AmazonSearchTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,20 +1,25 @@
 package com.cloudtest;
 
-import java.net.MalformedURLException;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.URL;
+import java.util.Properties;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LocalTestExecution {
 
-	public static RemoteWebDriver driver;
+public class AmazonSearchTestCase {
+public static RemoteWebDriver driver;
 	
-@Test
-public void OpenChromeBrowser() throws MalformedURLException
-{
+	@Test
+	
+	public void AmazonDynamicSearchTest() throws IOException, InterruptedException
+	{
+		
 		WebDriverManager.chromedriver().setup();
 		
 		//Step 1 set up the URL for the Selenium Grid
@@ -47,10 +52,24 @@ public void OpenChromeBrowser() throws MalformedURLException
 		System.out.println(URL);
 		System.out.println(title);
 		
+		WebElement SearchBox = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+		
+		Properties prop = new Properties();
+		
+		FileInputStream inputFile = new FileInputStream("./Input/TestData.properties");
+		prop.load(inputFile);
+		
+		for(int i=1; prop.getProperty("SearchKeyword" +i)!=null;i++)
+		{
+			String SearchTerm = prop.getProperty("SearchKeyword"+i);
+			System.out.println(SearchTerm);
+			SearchBox.sendKeys(SearchTerm);
+			SearchBox.clear();
+		}
+		
 		driver.quit();
-		
-		
-	}
-	
 
+	}
 }
+
+
